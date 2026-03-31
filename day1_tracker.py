@@ -42,7 +42,7 @@ class CGPACalculator:
         total_credits = sum(self.credits)
 
         if total_weighted_points > 0 and total_credits > 0:
-            cgpa = total_weighted_points / total_credits
+            cgpa = total_weighted_points / total_credits # => Formula For calculating CGPA
             print(f"Your CGPA is: {cgpa:.2f}")
 
         else:
