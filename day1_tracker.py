@@ -8,7 +8,7 @@ class CGPACalculator:
         self.credits = credits
         self.marks = marks
 
-    def calculate_grade(self, total_weighted_points):
+    def calculate_grade(self):
         total_weighted_points = 0
 
         for i in range(len(self.marks)):
@@ -34,7 +34,8 @@ class CGPACalculator:
                 total_weighted_points += self.credits[i] * self.grade_points['C']
             else:
                 total_weighted_points += self.credits[i] * self.grade_points['U']
-
+        
+        return total_weighted_points
     def calculate_cgpa(self):
         cgpa = 0
         total_weighted_points = self.calculate_grade()
@@ -43,7 +44,7 @@ class CGPACalculator:
         if total_weighted_points > 0 and total_credits > 0:
             cgpa = total_weighted_points / total_credits
             print(f"Your CGPA is: {cgpa:.2f}")
-            
+
         else:
             if total_weighted_points == 0 or total_credits == 0:
                 print("Error: Total weighted points and total credits must be greater than zero.")
