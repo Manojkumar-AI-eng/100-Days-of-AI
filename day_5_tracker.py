@@ -1,32 +1,41 @@
+import csv #🏃‍♀️‍➡️New Tool For Day 5
+
 class Grade_Analyzer:
     def __init__(self, student_marks, subject_count):
         self.student_marks = student_marks # This is our dictionary {Name: Total}
         self.subject_count = subject_count
 
-    def calculate_average(self):
-        # Instead of self.keys and self.values, we use .items()
-        # .items() gives us both the Key (Name) and Value (Total) at once
-        with open("average_marks.txt", "w", newline="") as file:  # Open a file to write the average marks
-            file.write("Average Marks of Students/Student:\n")
+    def generate_csv_report(self):
+        #We use "Newline=''" to prevent blank rows in Excel
+        with open("student_data_day_5.csv", "w", newline="") as file:  # Open a file to write the average marks
+            file.write("SCORE CARD📋:-\n")
+            csv_writer = csv.writer(file)
+
+            # 1. Write the Header (Top row of Your Spreadsheet)
+            csv_writer.writerow(["Student name", "Total mark", "Average", "Status"])
+            
+            #2. Loop through your data and write rows
             for name, total in self.student_marks.items():
                 average = total / self.subject_count
-                file.write(f"{name}: {average:.2f}\n")
 
                 if average >= 80:
-                    file.write("Status: Excellent\n\n")
+                    Status = "Excellent"
                 elif 80 > average >= 40:
-                    file.write("Status: Average\n\n")
+                    Status = "Average"                
                 else:
-                    file.write("Status: Needs Attention\n\n")
-                print(f"{name}: {average:.2f}\n")
+                    Status = "Needs Attention"                
 
-print("-------Data Asker-------")
+                csv_writer.writerow([name, total, f"{average:.2f}", Status])
+        
+        print("\n✅ Success! 'student_data_day5.csv' has been created😎")
+#--- DATA INPUT SECTION ---
+print("-------Day 5: CSV Data Architect😍-------")
 
 # 1. Validation for subject and student counts
 while True:
     try:
-        subject_count = int(input("How many subjects do u have? : "))
-        student_count = int(input("How many students want to analyze? : "))
+        subject_count = int(input("How many subjects do u have?🤔 : "))
+        student_count = int(input("How many students want to analyze?🤔 : "))
         
         # Check if the numbers are actually useful (Greater than 0)
         if subject_count > 0 and student_count > 0:
@@ -70,5 +79,6 @@ for i in range(student_count):
 
     student_with_mark[name] = total_mark
 
-cls_name = Grade_Analyzer(student_with_mark, student_count)
-cls_name.calculate_average()
+# --- RUNNING THE ANALYZER ---
+Analyzer = Grade_Analyzer(student_with_mark, student_count)
+Analyzer.generate_csv_report()

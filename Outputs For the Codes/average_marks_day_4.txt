@@ -1,0 +1,16 @@
+Average Marks of Students/Student:
+Manojkumar M: 86.80
+Status: Excellent
+
+Manickavel M: 89.20
+Status: Excellent
+
+Mukilan V: 72.60
+Status: Average
+
+Vijayaragavan S: 99.40
+Status: Excellent
+
+Mottaram seval: 35.60
+Status: Needs Attention
+
