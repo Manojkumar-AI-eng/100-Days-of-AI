@@ -71,4 +71,4 @@ for i in range(student_count):
     student_with_mark[name] = total_mark
 
 cls_name = Grade_Analyzer(student_with_mark, student_count)
-cls_name.calculate_average()
+cls_name.calculate_average() 
