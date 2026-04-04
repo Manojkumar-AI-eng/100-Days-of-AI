@@ -64,4 +64,5 @@ marks = [int(input(f"Enter marks for subject {x + 1}: ")) for x in range(0, subj
 
 
 calculator = CGPACalculator(grade_points, credits, marks)
-calculator.calculate_cgpa()
+calculator.calculate_cgpa() 
+
