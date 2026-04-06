@@ -21,6 +21,6 @@ for phase_name, days in phases.items():
     elif "Machine Learning" in phase_name:
         print("   Goal: Build your first prediction models.")
     else:
-        print("   Goal: Finish a project for your Resume!")
+        print("   Goal: Finish a project for My Resume!")
 
 print("\n" + "="*40 + "\n🔥 1% better every day. Let's go!")
