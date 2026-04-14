@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Manojkumar M",
+        "marks": [
+            90,
+            98,
+            80,
+            90,
+            80
+        ],
+        "subjects": [
+            "Tamil",
+            "English",
+            "Maths",
+            "Science",
+            "Social"
+        ],
+        "final_cgpa": 9.12
+    },
+    {
+        "name": "Rahulgandhi M",
+        "marks": [
+            90,
+            80,
+            70,
+            70,
+            80
+        ],
+        "subjects": [
+            "Tamil",
+            "English",
+            "Maths",
+            "Science",
+            "Social"
+        ],
+        "final_cgpa": 7.71
+    }
+]
