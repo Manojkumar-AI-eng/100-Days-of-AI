@@ -3,27 +3,36 @@ import os
 import random
 from gpa_calculator import CGPACalculator 
 
-def save_to_database(student_data, filename="records.json"):
-    """
-    Handles the 'Load -> Update -> Save' logic for our JSON database.
-    """
+def get_safe_input(prompt):
     try:
-        # 1. Load existing data (The 'Security Guard' check)
-        if os.path.exists(filename):
-            with open(filename, "r") as file:
-                database = json.load(file)
-        else:
-            database = []
+        return int(input(prompt))
+    except ValueError:
+        print("Invalid input! Defaulting to 0.")
+        return 0
 
-        # 2. Add the new record to our list
-        database.append(student_data)
+def save_to_database(student_data, filename="records.json"):
+    # 1. Initialize an empty list
+    all_students = []
 
-        # 3. Write the updated list back to the file (The 'Freezer')
+    # 2. READ: Pull existing students into Python memory
+    if os.path.exists(filename) and os.path.getsize(filename) > 0:
+        with open(filename, "r") as file:
+            try:
+                all_students = json.load(file)
+            except json.JSONDecodeError:
+                # If file is corrupted, start fresh
+                all_students = []
+
+    # 3. MODIFY: Add the new student to the Python list
+    all_students.append(student_data)
+
+    # 4. WRITE: Overwrite the file with the full, updated list
+    # Using 'w' ensures the file is always a single, valid JSON array
+    try:
         with open(filename, "w") as file:
-            json.dump(database, file, indent=4)
-            
-        print(f"\n✅ Success: Record persisted to {filename}")
-        
+            json.dump(all_students, file, indent=4)
+        print(f"\n✅ Success: {student_data['name']} added to {filename}")
+        print(f"📊 Total Students in file: {len(all_students)}")
     except IOError as e:
         print(f"❌ File Error: {e}")
 
@@ -34,12 +43,36 @@ def main():
     grade_points = {'O': 10, 'A+': 9, 'A': 8, 'B+': 7, 'B': 6, 'C+': 5, 'C': 4, 'U': 0}
     
     # Get user input for today's entry
-    name = input("Enter Student Name: ")
-    num_subjects = int(input("Enter number of subjects: "))
-    
+    try:
+        name = input("Enter Student Name: ")
+        if not name.strip():
+            print("Name cannot be empty.")
+            return
+        elif name.isdigit():
+            print("Name cannot be a number.")
+            return
+        elif any(char.isdigit() for char in name):
+            print("Name cannot contain numbers.")
+            return
+        elif len(name) > 20 or len(name) < 2:
+            print("Name is not within the allowed length (2-20 characters). Please enter a name with 20 characters or fewer.")
+            return
+        else:
+            pass  # Name is valid, continue with the program
+    except Exception:
+        print("Invalid input. Please enter a valid name.")
+        return
+
+    try:
+        num_subjects = int(input("Enter number of subjects: "))
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+        return
+
     # Generate random credits (1-4) and get marks
     credits = [random.randint(2, 4) for _ in range(num_subjects)]
-    marks = [int(input(f"Enter marks for subject {i+1}: ")) for i in range(num_subjects)]
+    subjects = [input(f"Enter subject {i+1}: ") for i in range(num_subjects)]
+    marks = [get_safe_input(f"Enter marks for subject {i+1}: ") for i in range(num_subjects)]
     
     # 2. Use the imported Logic
     calc = CGPACalculator(grade_points, credits, marks)
@@ -47,12 +80,10 @@ def main():
     
     # 3. Create the JSON-ready Dictionary
     current_entry = {
-        "day": 11,
         "name": name,
         "marks": marks,
-        "credits": credits,
-        "final_cgpa": round(cgpa_result, 2),
-        "tools_used": ["json", "os", "OOP"]
+        "subjects": subjects,
+        "final_cgpa": round(cgpa_result, 2)
     }
     
     # 4. Save to the file
