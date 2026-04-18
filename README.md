@@ -1,10 +1,59 @@
-# 100 Days of AI and Data Science
+# 🚀 100 Days of AI
 
-Started on: March 31, 2026
-Goal: To become a Job-Ready AI Engineer.
+Manojkumar M | B.Tech Student:-
 
-"I am a first-year B.Tech student on a 100-day mission to master AI. My focus is on building robust, error-resistant applications and moving from basic coding to engineering-level logic. Every commit represents a day of solving real-world programming challenges."
+   A dedicated 100-day sprint focused on Data Engineering, Python Automation, and Mechine Learning.This project documents my journey from core Python logic to building advanced, secure data pipelines.
 
-"Dedicated to the #100DaysOfAI challenge, bridging the gap between academic theory and production-grade code. Specializing in data integrity, version control best practices, and algorithmic problem-solving."
+## 🏗️ Project Architecture
 
-B.Tech Student | 100 Days of AI Challenge 🚀 | Focused on Python, Logic Building, and Robust Error Handling
+    Based on my strategic roadmap, the project is structured into four critical developmental stages:
+
+### 📊 Phase 1: Python & Data Analytics
+
+    Focus: Mastering Object-Oriented Programming (OOP), Pandas, and NumPy.
+
+    Goal: Building scripts to clean messy datasets and generate professional data visualizations.
+
+### 🧩 Phase 2: Data Structures
+
+    Focus: In-depth study of efficient data organization.
+
+    Goal: Implementing and mastering core Data Structures to optimize code performance.
+
+### 🤖 Phase 3: Machine Learning
+
+    Focus: Scikit-Learn implementation and statistical modeling.
+
+    Goal: Developing and training my first set of predictive AI models.
+
+### 🎓 Phase 4: Capstone & Portfolio
+
+    Focus: Project integration and refinement.
+
+    Goal: Finalizing a high-impact project specifically designed for my professional resume.
+
+## 🛠️ Technical Arsenal
+
+    Language: Python 🐍 (OOP, Data Processing)
+
+    Libraries: NumPy, Pandas, Scikit-Learn
+
+    Concepts: Data Structures, Predictive Modeling, Data Visualization
+
+    Tools: Git, GitHub, VS Code
+
+## 📈 Current Progress
+
+    [x] Phase 1: In Progress 🛠️ (Mastering Data Handling)
+
+    [ ] Phase 2: Locked 🔒
+
+    [ ] Phase 3: Locked 🔒
+
+    [ ] Phase 4: Locked 🔒
+
+## 📈 Current Milestone
+
+    Successfully transitioned from basic logic to structured Data Modeling. Currently building automated systems that bridge the gap between different data formats.
+
+# Connect with me on LinkedIn 🔗 : www.linkedin.com/in/manojkumar111
