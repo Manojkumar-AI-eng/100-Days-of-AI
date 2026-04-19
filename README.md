@@ -56,4 +56,4 @@ Manojkumar M | B.Tech Student:-
 
     Successfully transitioned from basic logic to structured Data Modeling. Currently building automated systems that bridge the gap between different data formats.
 
-# Connect with me on LinkedIn 🔗 : www.linkedin.com/in/manojkumar111
+# Connect with me on LinkedIn 🔗 : <www.linkedin.com/in/manojkumar111>
