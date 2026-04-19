@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StudentProfile>
+  <Student_1>
+    <Name>Karthikeyan M</Name>
+    <Marks>
+      <Tamil>88</Tamil>
+      <English>76</English>
+      <Maths>67</Maths>
+      <Science>78</Science>
+      <Social>89</Social>
+      <Total>398</Total>
+    </Marks>
+  </Student_1>
+  <Student_2>
+    <Name>Manickavel M</Name>
+    <Marks>
+      <Tamil>88</Tamil>
+      <English>90</English>
+      <Maths>95</Maths>
+      <Science>76</Science>
+      <Social>78</Social>
+      <Total>427</Total>
+    </Marks>
+  </Student_2>
+  <Student_3>
+    <Name>Manojkumar m</Name>
+    <Marks>
+      <Tamil>96</Tamil>
+      <English>88</English>
+      <Maths>80</Maths>
+      <Science>95</Science>
+      <Social>75</Social>
+      <Total>434</Total>
+    </Marks>
+  </Student_3>
+  <Student_4>
+    <Name>Moha Ram O</Name>
+    <Marks>
+      <Tamil>34</Tamil>
+      <English>35</English>
+      <Maths>37</Maths>
+      <Science>45</Science>
+      <Social>32</Social>
+      <Total>183</Total>
+    </Marks>
+  </Student_4>
+  <Student_5>
+    <Name>Mukilan V</Name>
+    <Marks>
+      <Tamil>80</Tamil>
+      <English>75</English>
+      <Maths>67</Maths>
+      <Science>70</Science>
+      <Social>89</Social>
+      <Total>381</Total>
+    </Marks>
+  </Student_5>
+  <Student_6>
+    <Name>Vijayaragavan S</Name>
+    <Marks>
+      <Tamil>99</Tamil>
+      <English>99</English>
+      <Maths>100</Maths>
+      <Science>100</Science>
+      <Social>100</Social>
+      <Total>498</Total>
+    </Marks>
+  </Student_6>
+</StudentProfile>
